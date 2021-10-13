@@ -3,10 +3,10 @@ const route = useRoute()
 const router = useRouter()
 // external endpoint
 const {data, error} = await useFetch(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
+// redirect to a custom 404.vue page
 const errorString = error?.value?.toString()
 if (errorString?.includes('404')) {
     console.log('error: ', '404');
-    // FIXME there is no 404 response on a failed page load
 }
 if (!data.value) {
     router.push({
