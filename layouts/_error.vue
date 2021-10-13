@@ -6,7 +6,7 @@ console.log(this);
 
 <template>
   <div class="error">
-    <h1>404</h1>
+    <h1>CUSTOM 404</h1>
     <p>The page you are looking for wasn't found.</p>
   </div>
 </template>
