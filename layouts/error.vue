@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 // dynamic route
 // requires script for $route type
+console.log(this);
 </script>
 
 <template>
-  <div>
-     <h1 class="text-5xl font-bold">{{ $route.params.slug }} page</h1>
+  <div class="error">
+    <h1>404</h1>
+    <p>The page you are looking for wasn't found.</p>
   </div>
 </template>
