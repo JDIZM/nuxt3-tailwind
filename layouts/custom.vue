@@ -1,13 +1,6 @@
 <template>
-  <NuxtLayout name="custom">
-    <template #header> Some header template content. </template>
-
-    The rest of the page
-  </NuxtLayout>
+  <div>
+    Some shared layout content:
+    <slot />
+  </div>
 </template>
-
-<script>
-export default {
-  layout: false,
-};
-</script>
