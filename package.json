@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",
-    "nuxt3": "^3.0.0-27234503.d5127e9",
+    "nuxt3": "latest",
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.16"
   }
