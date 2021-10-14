@@ -8,8 +8,9 @@
   </NuxtLayout>
 </template>
 
-<script>
+<!-- doesn't appear to need this -->
+<!-- <script>
 export default {
   layout: false,
 };
-</script>
+</script> -->
