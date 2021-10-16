@@ -1,0 +1,18 @@
+// custom styles while using tailwind theme
+
+// using tailwind theme variables inside scss with the theme() function 
+// https://tailwindcss.com/docs/using-with-preprocessors#variables
+// https://tailwindcss.com/docs/functions-and-directives#theme
+
+html, body {
+  background-color: theme('colors.blue.500');
+  @apply text-black;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: theme('colors.indigo.900');
+    @apply text-white;
+  }
+}
+

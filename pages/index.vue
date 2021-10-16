@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import HelloWorld from '@/components/HelloWorld.vue'
+// hello world component is auto imported
 const title = "Hello World"
 // fetching data from /server/api/hello.ts
 const data = await useFetch('/api/hello')

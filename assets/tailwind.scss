@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+// https://tailwindcss.com/docs/using-with-preprocessors#build-time-imports
+// https://tailwindcss.com/docs/using-with-preprocessors#using-sass-less-or-stylus
+@import './_custom.scss';
+@import './_mixins.scss';

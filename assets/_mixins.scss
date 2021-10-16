@@ -1,0 +1,26 @@
+// mixins
+
+// using tailwind theme variables inside scss with the theme() function 
+// https://tailwindcss.com/docs/using-with-preprocessors#variables
+// https://tailwindcss.com/docs/functions-and-directives#theme
+
+$breakpoints: (
+  sm: theme('screens.sm'),
+  md: theme('screens.md'),
+  lg: theme('screens.lg'),
+  xl: theme('screens.xl')
+);
+
+@mixin breakpoint($size) {
+  @media screen and (min-width: map-get($breakpoints, $size)) {
+    // insert content inside
+    @content
+  }
+};
+
+@include breakpoint('sm') {
+  html, body {
+    background-color: theme('colors.pink.900');
+    color: theme('colors.white');
+  };
+};

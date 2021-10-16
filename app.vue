@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import './assets/tailwind.css'
+import './assets/tailwind.scss'
 </script>
 
 <template>
-<div class="container flex p-4 justify-center">
+<div class="container mx-auto flex p-4 justify-center">
    <NuxtPage />
 </div>
 </template>
