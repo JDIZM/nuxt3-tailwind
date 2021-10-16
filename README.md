@@ -31,11 +31,3 @@ yarn build
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
-
-## Note
-
-You may receive this warning when the server starts because it hasn't yet built the file.
-
-```
- WARN  [SSR] Error transforming /pages/404.vue: TSConfckParseError: failed to resolve "extends":"./.nuxt/tsconfig.json"
- ```
