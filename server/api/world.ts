@@ -2,8 +2,11 @@ import type { IncomingMessage, ServerResponse } from 'http';
 
 // make a request with query params to /api/world?key=value
 export default async (req: IncomingMessage, res: ServerResponse) => {
-    const url = new URL(req.url, `http://${req.headers.host}/api/world`);
-    const obj = {};
+    const url = new URL(req.url!, `http://${req.headers.host}/api/world`);
+    interface obj {
+        [key: string]: string;
+      }
+      const obj: obj = {};
 
     console.log('api req', url);
 
