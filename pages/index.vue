@@ -1,9 +1,12 @@
 <script lang="ts" setup>
 // hello world component is auto imported
 const title = "Hello World"
+
 // fetching data from /server/api/hello.ts
-const data = await useFetch('/api/hello')
-const hello = data.data
+const { data } = await useFetch('/api/hello')
+
+if (process.server) console.log("server");
+if (process.client) console.log("client");
 </script>
 
 <template>
@@ -15,7 +18,7 @@ const hello = data.data
     </div>
     <div>
       <p>fetching some data from /server/api/hello.ts</p>
-      <pre>{{ hello }}</pre>
+      <pre>{{ data }}</pre>
       <p>you can visit the api endpoint at <a href="/api/hello">/api/hello</a></p>
     </div>
   </div>
