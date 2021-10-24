@@ -1,4 +1,4 @@
 export default () => ({
-    message: 'hello world',
-    items: [1, 2, 3],
-})
+  message: "hello world",
+  items: [1, 2, 3],
+});
