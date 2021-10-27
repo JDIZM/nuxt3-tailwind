@@ -1,13 +1,15 @@
 <script lang="ts" setup>
+import Todo from "@/interfaces/Todo";
+
 const { params } = useRoute();
 const router = useRouter();
 
-const { data } = await useFetch(
+// specify the return type as an array of todos
+const { data } = await useFetch<string, Array<Todo>>(
   `https://jsonplaceholder.typicode.com/todos/${params.id}`
 ); // ref
 
-// FIXME todo: unknown
-const todo: any = data.value; // reactive
+const todo: Array<Todo> = data.value; // reactive
 
 // redirect to a custom 404.vue page
 if (!todo) {

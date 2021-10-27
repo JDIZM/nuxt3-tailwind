@@ -1,17 +1,12 @@
 <script lang="ts" setup>
-const { data, error } = await useFetch(
+import Todo from "@/interfaces/Todo";
+
+// specify the return type as an array of todos
+const { data, error } = await useFetch<string, Array<Todo>>(
   `https://jsonplaceholder.typicode.com/todos`
 ); // ref
 
-interface Todo {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-}
-// FIXME Type 'unknown' is not assignable to type 'Todo[]'
-const todos: Array<Todo> = data.value; // type unknown
-// const todos = data.value; // reactive
+const todos: Array<Todo> = data.value; // reactive
 
 if (error.value) {
   const { message: errorMsg } = error.value;

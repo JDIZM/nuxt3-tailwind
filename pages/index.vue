@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// import { useNuxtApp } from "#app";
+import { useNuxtApp } from "#app";
 // hello world component is auto imported
 const title = "Hello World";
 
@@ -9,10 +9,11 @@ const { data } = await useFetch("/api/hello");
 if (process.server) console.log("server");
 if (process.client) console.log("client");
 
-// if (process.server) {
-//   const nuxtApp = useNuxtApp();
-//   console.log(nuxtApp?.ssrContext?.req.headers);
-// }
+// access the request object server side
+if (process.server) {
+  const nuxtApp = useNuxtApp();
+  console.log(nuxtApp.ssrContext?.req.headers);
+}
 </script>
 
 <template>
